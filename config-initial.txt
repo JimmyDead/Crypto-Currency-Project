@@ -1,0 +1,66 @@
+yarn add @react-navigation/native
+yarn add react-native-screens react-native-safe-area-context
+yarn add @react-navigation/stack
+yarn add @react-navigation/bottom-tabs
+//npx react-native link react-native-safe-area-context
+yarn add react-native-gesture-handler
+npx react-native link react-native-gesture-handler
+
+/*************************************
+PASSO 1-
+
+yarn add react-native-reanimated@beta
+
+
+PASSO 2-
+
+Adicione o plugin babel da Reanimated ao seu babel.config.js:
+module.exports = {
+      ...
+      plugins: [
+          ...
+          'react-native-reanimated/plugin'],
+  };
+  //OBS: O plugin reanimado deve ser listado por último.
+  Ligue o motor Hermes editando android/app/build.gradle
+
+  project.ext.react = [
+    enableHermes: true  // <- here | clean and rebuild if changing
+  ] 
+
+
+
+PASSO 3-
+
+depois modifique o arquivo in android/app/src/main/java/MainApplication.java
+
+
+  import com.facebook.react.bridge.JSIModulePackage; // <- add //ADICIONAR ISSO
+  import com.swmansion.reanimated.ReanimatedJSIModulePackage; // <- add //ADICIONAR ISSO
+  ...
+  private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
+  ...
+
+      @Override
+      protected String getJSMainModuleName() {
+        return "index";
+      }
+
+      @Override //ADICIONAR ISSO TODO ESSE METODO
+      protected JSIModulePackage getJSIModulePackage() {
+        return new ReanimatedJSIModulePackage(); // <- add
+      }
+    };
+  ...
+
+
+/**************************************
+
+  yarn add @react-native-community/masked-view
+  npx react-native link @react-native-community/masked-view
+  npm install react-redux redux redux-thunk
+  npm install axios
+  npm install @rainbow-me/animated-charts
+  npm install react-native-svg
+  npm install moment
+  npm install react-native-chart-kit
