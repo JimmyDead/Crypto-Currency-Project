@@ -17,14 +17,9 @@ const MainLayout = ({ children, isTradeModalVisible }) => {
 
     useEffect(() => {
         if (isTradeModalVisible) {
-            Animated.timing(modalAnimatedValue, {
-                toValue: 1, duration: 500, useNativeDriver: false
-            }).start()
+            animatedTime(1, 500, false)
         } else {
-            Animated.timing(modalAnimatedValue, {
-                toValue: 0, duration: 500, useNativeDriver: false
-            }).start()
-            //animatedTime(0, 500, false)
+            animatedTime(0, 500, false)
         }
     }, [isTradeModalVisible])
 
@@ -51,9 +46,9 @@ const MainLayout = ({ children, isTradeModalVisible }) => {
                 backgroundColor: COLORS.primary,
                 top: modalY
             }}>
-                <IconTextButton label="Transferir" icon={icons.send} onPress={() => console.warn('teste')} />
+                <IconTextButton label="Transferir" icon={icons.send} onPress={() => console.warn('Transferindo')} />
                 <IconTextButton label="Retirar" icon={icons.withdraw}
-                    containerStyle={{ marginTop: SIZES.base }} onPress={() => console.warn('teste2')} />
+                    containerStyle={{ marginTop: SIZES.base }} onPress={() => console.warn('Finalizando Posição')} />
             </Animated.View>
 
         </View>
