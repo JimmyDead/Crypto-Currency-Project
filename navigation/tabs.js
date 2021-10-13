@@ -28,6 +28,7 @@ const Tabs = ({ setTradeModalVisibility, isTradeModalVisible }) => {
     return (
         <Tab.Navigator
             screenOptions={({ route }) => ({
+                headerShown: false,
                 tabBarShowLabel: false,
                 tabBarStyle: {
                     backgroundColor: COLORS.primary,

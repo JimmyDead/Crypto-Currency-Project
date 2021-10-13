@@ -60,7 +60,7 @@ depois modifique o arquivo in android/app/src/main/java/MainApplication.java
   npx react-native link @react-native-community/masked-view
   npm install react-redux redux redux-thunk
   npm install axios
-  npm install @rainbow-me/animated-charts
+  yarn add @rainbow-me/animated-charts
   npm install react-native-svg
   npm install moment
   npm install react-native-chart-kit
