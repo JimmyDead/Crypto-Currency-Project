@@ -8,6 +8,7 @@ import { SIZES, COLORS, FONTS, dummyData, icons } from '../constants';
 import BalanceInfo from '../components/BalanceInfo';
 import IconTextButton from '../components/iconTextButton';
 import Chart from '../components/Chart';
+import ChartCreate from '../components/Chart';
 
 const Home = ({ getHoldings, getCoinMarket, myHoldings, coins }) => {
 
@@ -58,9 +59,8 @@ const Home = ({ getHoldings, getCoinMarket, myHoldings, coins }) => {
                 {renderWalletInfoSection()}
 
                 {/* GRAFICO */}
-                <Chart containerStyle={{ marginTop: SIZES.padding * 2 }}
-                    chartPrices={coins[0]?.sparkline_in_7d?.price}
-                />
+                {/*<Chart chartPrices={coins[0]?.sparkline_in_7d?.price}/>*/}
+                <ChartCreate />
 
                 {/* TOP CRYPTO*/}
             </View>
