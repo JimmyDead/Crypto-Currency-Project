@@ -1,32 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Text, View, Dimensions } from 'react-native'
 import { LineChart } from "react-native-chart-kit";
-import { COLORS, FONTS, SIZES } from '../constants'
-import moment from 'moment'
 
-const Chart = ({ containerStyle, chartPrices }) => {
-
-    //COLORS.lightGreen
-
-    let startUnixTimestamp = moment().subtract(7, 'day').unix()
-
-    let data = chartPrices ? chartPrices?.map((item, index) => {
-        return {
-            x: startUnixTimestamp + (index + 1) * 3600,
-            y: item
-        }
-    }) : []
-
-    let points = monotoneCubicInterpolation({ data, range: 40 })
-
-    return (
-        <>
-        </>
-    )
-}
-
-
-const ChartCreate = () => {
+const ChartCreate = ({ containerStyle }) => {
 
     const initialState = [0]
     const [data, setData] = useState(initialState)
@@ -51,7 +27,8 @@ const ChartCreate = () => {
     }
 
     const setValuesInChart = (setData, setTimeUpdate, cacheDatas) => {
-        const newData = [Math.random() * 10]
+        const numberData = Math.random() * 10
+        const newData = [numberData]
         setHourInChart(setTimeUpdate, cacheDatas)
         setData(oldArray => [...oldArray, newData])
     }
@@ -65,7 +42,7 @@ const ChartCreate = () => {
     )
 
     return (
-        <View style={{ marginTop: 25 }}>
+        <View style={{ /*...containerStyle,*/ marginTop: 25 }}>
             <LineChart
                 data={{
                     labels: timeUpdate,
@@ -74,9 +51,15 @@ const ChartCreate = () => {
                     }]
                 }}
                 width={Dimensions.get("window").width} // from react-native
-                height={220}
+                height={180}
                 yAxisLabel="$"
                 yAxisSuffix="k"
+                /*renderDotContent={({ x, y, index }) => <Text key={index} style={{
+                    position: 'absolute',
+                    paddingTop: y - 20,
+                    paddingLeft: x - 15,
+                    color: 'white'
+                }}>{(Math.round(parseFloat(data[index]) * 100) / 100).toFixed(2)}</Text>}*/
                 //yAxisInterval={1} // optional, defaults to 1
                 chartConfig={{
                     // backgroundColor: "#fff",
