@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { MainLayout } from '.';
 import BalanceInfo from '../components/BalanceInfo';
 import ChartCreate from '../components/Chart';
+import ChartPie from '../components/ChartPie';
 import { COLORS, dummyData, FONTS, icons, SIZES } from '../constants';
 import { getHoldings } from '../stores/market/marketActions';
 
@@ -49,7 +50,7 @@ const Portfolio = ({ getHoldings, myHoldings }) => {
 
                 {renderCurrentBalanceSection()}
 
-                {/* adicionar grafico aqui */}
+                <ChartPie myHoldings={myHoldings} />
 
                 <FlatList
                     data={myHoldings}
@@ -140,6 +141,9 @@ const Portfolio = ({ getHoldings, myHoldings }) => {
                             </TouchableOpacity>
                         )
                     }}
+                    ListFooterComponent={
+                        <View style={{ marginBottom: 50 }} />
+                    }
                 />
 
             </View>
