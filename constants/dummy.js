@@ -1,15 +1,23 @@
 export const holdings = [
     {
-        id: "bitcoin",
-        qty: 888
+        id: "solana",
+        qty: 100
     },
     {
         id: "ethereum",
-        qty: 188
+        qty: 9
     },
     {
         id: "dogecoin",
-        qty: 88888
+        qty: 57346
+    },
+    {
+        id: "polkadot",
+        qty: 300
+    },
+    {
+        id: 'binancecoin',
+        qty: 100
     }
 ]
 
