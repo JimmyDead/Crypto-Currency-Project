@@ -115,7 +115,7 @@ const Tabs = ({ setTradeModalVisibility, isTradeModalVisible }) => {
                     tabBarIcon: ({ focused }) => {
                         if (!isTradeModalVisible) {
                             return (
-                                <TabIcon focused={focused} icon={icons.profile} label="Profile" />
+                                <TabIcon focused={focused} icon={icons.profile} label="Perfil" />
                             )
                         }
                     }
