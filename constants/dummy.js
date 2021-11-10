@@ -22,8 +22,9 @@ export const holdings = [
 ]
 
 export const profile = {
-    id: 8888888,
-    email: "marcos.viniciusk8@hotmail.com",
+    id: 666,
+    email: "Marcos.viniciusk8@hotmail.com",
+    school: "Senac Santo Amaro"
 }
 
 export const settings = {
