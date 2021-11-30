@@ -8,7 +8,9 @@ Marcos Vinícius Santos Souza
 
 Tecnologias ultilizadas:
 
-React js, React native, redux, use state, use , React Navigation, Flat list, Requisição GET em api, Bilioteca para graficos (react-native-chart-kit ,victory-native) etc
+React js, React native, redux, use state, use , React Navigation, Flat list, Requisição GET em api, etc
+
+Bilioteca para graficos (react-native-chart-kit ,victory-native)
 
 API
 
