@@ -3,24 +3,29 @@ Projeto de corretora de crypto moedas usando react-native para a aula de disposi
 
 
 Integrantes:
+
 Marcos Vinícius Santos Souza
 
 Tecnologias ultilizadas:
+
 React js, React native, redux, use state, use , React Navigation, Flat list, Requisição GET em api, Bilioteca para graficos (react-native-chart-kit ,victory-native) etc
 
 API
+
 My Holdings para simular rentabilidade de uma carteira (os ativos que estão mostrando na aplicação estão mockados porém seus valores vem atraves da api)
 https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&order=${orderBy}&per_page=${perPage}&page=${page}&sparkline=${sparkline}&price_change_percentage=${priceChangePerc}&ids=${ids}
 
 Coin Market para dados de mercado
+
 https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&order=${orderBy}&per_page=${perPage}&page=${page}&sparkline=${sparkline}&price_change_percentage=${priceChangePerc}
 
 
-Uso do projeto:
 
-SISTEMA UTILIZADO LINUX UBUNTU 20.04
+#Uso do projeto:
 
-Requisitos:
+#SISTEMA UTILIZADO LINUX UBUNTU 20.04
+
+##Requisitos:
 
 1- Yarn
 
@@ -31,7 +36,9 @@ Requisitos:
 4- npx ou react native instalado
 
 
-Resolver dependencias e cache:
+
+
+##Resolver dependencias e cache:
 
 1- Clone o repositorio
 
@@ -52,7 +59,9 @@ Resolver dependencias e cache:
    5- //dependendo pode ter que usar o npm install tambem, no geral apenas o yarn install já funciona
    
    
-Rodar o projeto:
+   
+   
+##Rodar o projeto:
 
 1- Abra 3 terminais dentro da raiz do projeto
 
